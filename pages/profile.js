@@ -3,6 +3,7 @@ import Leaderboard from '@/components/Leaderboard'
 import PartyList from '@/components/PartyList'
 import { UserContext } from '@/contexts/UserContext'
 import { db } from '@/firebase'
+import Link from 'next/link'
 import React, { useContext,useState,useEffect } from 'react'
 
 
@@ -86,9 +87,9 @@ const Profile = () => {
 
         <h2 className="text-lg font-bold">Recent History</h2>
         <ul className="mt-2">
-            {gameList.slice(0, 5).map((game)=>{
+            {gameList.slice(0, 5).map((game,index)=>{
                 return(
-                <li className="flex items-center my-2">
+                <li  key={index }className="flex items-center my-2">
             
                 <span className={`${game.gameId!='Redeemed'?'bg-green-500':'bg-blue-500'} text-white rounded-full p-2 mr-2`}>
                   <svg
@@ -110,7 +111,7 @@ const Profile = () => {
             })}
         </ul>
       </div>
-      <div className='underline'><a href='/history'>Load Complete History....</a></div>
+      <div className='underline'><Link href='/history'>Load Complete History....</Link></div>
       
     </div>
   

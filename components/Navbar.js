@@ -67,7 +67,7 @@ const Navbar = () => {
     <div className='mx-20 w-screen relative flex items-center justify-between'>
           
             <div className="w-2/3 flex justify-between ">
-              <span className="text-white hover:text-gray-300 text-3xl font-extrabold cursor-pointer "><a href='/'>GAMEZONE</a></span>
+              <span className="text-white hover:text-gray-300 text-3xl font-extrabold cursor-pointer "><Link href='/'>GAMEZONE</Link></span>
               </div>
             {/* </div> */}
             {/* <div className="flex"> */}

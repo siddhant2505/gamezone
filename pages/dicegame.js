@@ -67,7 +67,7 @@ userGamesCollection.add(newUserGame).then(docRef => {
     }
     setRolling(false)
   };
-  if(user.coins<10) return (<div>can't play this game</div>)
+  if(user.coins<10) return (<div>can not play this game</div>)
   return (
     <>
     <div className='bg-dark-primary'>

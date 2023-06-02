@@ -27,8 +27,8 @@ export const GameList = ({coins}) => {
       {/* <div className="text-center"> Current Coins: {coins}</div> */}
       <div className="flex flex-wrap items-center justify-center">
         {games.length==0? (<span className='my-5'>Please Wait....</span>):
-        games.map((game) => (
-            <div className='w-1/2 flex items-center justify-center'>
+        games.map((game,index) => (
+            <div key={index} className='w-1/2 flex items-center justify-center'>
           <GameCard key={game.id} game={game} coins={coins}/>
           </div>
         ))}

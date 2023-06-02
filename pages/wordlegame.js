@@ -116,11 +116,11 @@ const handleSubmit = () => {
         console.log(`${index}letter is ${letter}`)
       if (word[index]==letter) {
         console.log('sahi pakde')
-        return <span className="text-white w-10 h-10 font-bold rounded-full mx-5 pt-2 text-center bg-green-500">{letter.toUpperCase()}</span>;
+        return <span key={index} className="text-white w-10 h-10 font-bold rounded-full mx-5 pt-2 text-center bg-green-500">{letter.toUpperCase()}</span>;
       } else if (!correctLetters.includes(letter)&&correctButWrongPositionLetters.includes(letter)) {
-        return <span className="text-white w-10 h-10 font-bold rounded-full  mx-5 pt-2 text-center bg-yellow-500">{letter.toUpperCase()}</span>;
+        return <span key={index} className="text-white w-10 h-10 font-bold rounded-full  mx-5 pt-2 text-center bg-yellow-500">{letter.toUpperCase()}</span>;
       } else {
-        return <span className="text-white w-10 h-10 font-bold rounded-full mx-5 pt-2 text-center bg-gray-500">{letter.toUpperCase()}</span>;
+        return <span key={index} className="text-white w-10 h-10 font-bold rounded-full mx-5 pt-2 text-center bg-gray-500">{letter.toUpperCase()}</span>;
       }
     });
     setFeedback([...feedback,ffeedback]);
@@ -137,7 +137,7 @@ const resetGame = () => {
   };
 
   if (hasPlayedToday){
-    return (<img src="https://i.ytimg.com/vi/p2KlbcmhYuM/maxresdefault.jpg" className="w-screen"/>)
+    return (<img src='https://i.ytimg.com/vi/p2KlbcmhYuM/maxresdefault.jpg' className='w-screen'/>)
   }
   return (
     <>
@@ -177,7 +177,7 @@ const resetGame = () => {
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="bg-white rounded-md p-8 shadow-lg">
         <h2 className="text-2xl font-bold mb-4">Congratulations!</h2>
-        <p className="text-lg mb-4">You guessed the word "{word}" in {6 - remainingAttempts} attempts.</p>
+        <p className="text-lg mb-4">You guessed the word {word} in {6 - remainingAttempts} attempts.</p>
         <div className="flex justify-center">
           <button className="bg-blue-500 text-white px-4 py-2 rounded-md mr-4" onClick={resetGame}>
             Play again

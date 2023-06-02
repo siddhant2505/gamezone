@@ -86,7 +86,7 @@ const History = () => {
       <h1 className='text-center mt-5 text-4xl font-bold'>History</h1>
     <div className=" mt-10 ">
     {!currentGames.empty && currentGames
-    .map((game)=>{
+    .map((game,index)=>{
               const formattedDateTime = moment.unix(game.datePlayed.seconds).format('YYYY-MM-DD HH:mm:ss');
               const date = moment(formattedDateTime).format('YYYY-MM-DD');
               const time = moment(formattedDateTime).format('HH:mm');
@@ -94,7 +94,7 @@ const History = () => {
        // const formattedDate = moment(game.datePlayed).format('YYYY-MM-DD');
       //  const formattedTime = moment(game.datePlayed).format('HH:mm:ss');
         return (
-        <div className="bg-white w-5/12 mx-auto justify-between px-10 rounded-lg p-4 shadow-md mb-4 flex">
+        <div key={index} className="bg-white w-5/12 mx-auto justify-between px-10 rounded-lg p-4 shadow-md mb-4 flex">
         {/* <p>Date and Time: {game.datePlayed}</p> */}
         {game.gameId==='Redeemed'?(<p className='mr-5 font-extrabold'>Voucher {game.gameId}</p>)
         :(<p className='mr-5 '>Game <span className=' font-extrabold' >{game.gameId.toUpperCase()}</span></p>)

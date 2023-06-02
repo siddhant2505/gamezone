@@ -78,8 +78,8 @@ const Voucher = () => {
         </button>
       </div>
       <div className="flex flex-wrap justify-center">
-      {currentVouchers.map((voucher) => (
-        <VoucherCard voucher={voucher} id={voucher.id} onRedeem={() => handleRedeem(voucher)}/>
+      {currentVouchers.map((voucher,index) => (
+        <VoucherCard key={index} voucher={voucher} id={voucher.id} onRedeem={() => handleRedeem(voucher)}/>
       ))}
         {voucher && (
       <RedeemModal isOpen={modalOpen} closeModal={() => setModalOpen(false)} voucher={voucher} />
@@ -104,28 +104,6 @@ const Voucher = () => {
     </div>
     </>
   );
-}
-
-
-const styles = {
-  voucherList: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    marginTop: '20px',
-  },
-  voucher: {
-    backgroundColor: '#eee',
-    padding: '20px',
-    borderRadius: '10px',
-    width: '45%',
-    cursor: 'pointer',
-  },
-  selectedVoucher: {
-    backgroundColor: '#ffcc00',
-    padding: '20px',
-    borderRadius: '10px',
-  }
 }
 
 export default Voucher
