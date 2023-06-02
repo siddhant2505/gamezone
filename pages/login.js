@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import React,{useEffect} from 'react'
 import { auth, GoogleAuthProvider, signInWithPopup,provider } from '@/firebase';
 
-const login = () => {
+const Login = () => {
     const router = useRouter();
     useEffect(() => {
         const checkAuthentication = async () => {
@@ -86,4 +86,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login

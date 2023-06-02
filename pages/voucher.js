@@ -8,7 +8,7 @@ import { CoinSystem } from '@/components/CoinSystem';
 
 
 
-const voucher = () => {
+const Voucher = () => {
     //const {darkMode,toggleDarkMode}=useContext(ThemeContext);
     const [vouchers, setVouchers] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -128,7 +128,7 @@ const styles = {
   }
 }
 
-export default voucher
+export default Voucher
 
 
 

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { db } from '@/firebase'
 import { UserContext } from '@/contexts/UserContext';
 import moment from 'moment-timezone';
-const history = () => {
+const History = () => {
     const [gameList,setGameList]=useState([])
     const {user,setUser}=useContext(UserContext)
     const [currentPage, setCurrentPage] = useState(1);
@@ -130,4 +130,4 @@ const history = () => {
   )
 }
 
-export default history
+export default History

@@ -6,7 +6,7 @@ import { GameList } from '@/components/GameList'
 import Leaderboard from '@/components/Leaderboard'
 import React from 'react'
 
-const layout = () => {
+const Layout = () => {
   return (
     <div className="flex flex-col min-h-screen bg-dark-secondary">
     {/* Navbar */}
@@ -64,4 +64,4 @@ const layout = () => {
   )
 }
 
-export default layout
+export default Layout

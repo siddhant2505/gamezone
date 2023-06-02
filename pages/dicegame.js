@@ -18,7 +18,7 @@ export const rollDice = () => {
   }
 
 
-const dicegame = () => {
+const DiceGame = () => {
     const {user,setUser,updateUser}=useContext(UserContext)
   const [bet, setBet] = useState(10);
   const [number, setNumber] = useState(1);
@@ -125,4 +125,4 @@ userGamesCollection.add(newUserGame).then(docRef => {
   );
 };
 
-export default dicegame;
+export default DiceGame;

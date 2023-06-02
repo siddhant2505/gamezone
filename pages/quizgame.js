@@ -3,7 +3,7 @@ import { UserContext } from '@/contexts/UserContext';
 import { db } from '@/firebase';
 import React, { useContext, useEffect, useState } from 'react'
 
-const quizgame = () => {
+const QuizGame = () => {
     const {user,setUser,updateUser}=useContext(UserContext)
     const [ques,setQues]=useState("");
     const [options,setOptions]=useState([]);
@@ -125,4 +125,4 @@ userGamesCollection.add(newUserGame).then(docRef => {
   )
 }
 
-export default quizgame
+export default QuizGame

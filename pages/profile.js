@@ -6,7 +6,7 @@ import { db } from '@/firebase'
 import React, { useContext,useState,useEffect } from 'react'
 
 
-const profile = () => {
+const Profile = () => {
     const {user,setUser}=useContext(UserContext) 
     const [gameList,setGameList]=useState([]) 
     useEffect(() => { 
@@ -130,5 +130,5 @@ const profile = () => {
   </>)
 }
 
-export default profile
+export default Profile
 

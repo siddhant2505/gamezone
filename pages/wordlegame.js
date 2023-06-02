@@ -9,7 +9,7 @@ import moment from "moment-timezone";
 const wordList = ['apple', 'hello', 'daisy'];
 
 // Define the game UI
-const wordlegame = () => {
+const WordleGame = () => {
     const {user,setUser,updateUser}=useContext(UserContext)
     const [hasPlayedToday, setHasPlayedToday] = useState(false);
     const [word,setWord] = useState("");
@@ -202,4 +202,4 @@ const resetGame = () => {
 };
 
 // Render the game UI
-export default wordlegame;
+export default WordleGame;
