@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.root{
+  background-color: #E1E1E8;
+}
+
+.hover-zoom {
+  transition: transform 0.2s;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.1);
+}
