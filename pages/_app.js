@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     if (!authenticated && router.pathname !== '/login') {
-      router.push('/login');
+      router.push('/'); //router.push('/login')
     }
   }, [authenticated, router.pathname]);
 
